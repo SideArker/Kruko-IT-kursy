@@ -1,0 +1,358 @@
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MCX Login</title>
+    <style>
+        body
+{
+    background-image: url(background.jpg);
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+    
+
+}
+
+.header
+{
+    background-color: #0a0a0a;
+    height: 12%;
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+}
+
+.header img
+{
+    height: 80px;
+    margin-left: 40px;
+    position: absolute;
+}
+
+.box{
+    width: 300px;
+    /*height: 100%;*/
+    top: 50%;
+    left: 75%;
+    position: absolute;
+    padding: 40px;
+    background: #0a0a0a;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    border-radius: 24px;
+}
+
+.box h1{
+  /*margin-top: 80%;*/
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+
+}
+
+.box input[type = "text"],.box input[type = "password"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+.box input[type = "text"]:focus,.box input[type = "password"]:focus{
+  width: 280px;
+  border-color: #D62839;
+}
+
+.box input[type = "submit"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #D62839;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.box input[type = "submit"]:hover{
+  background: #D62839;
+}
+
+.box input[value = "Sing In"]
+{
+  font-size: 10px;
+  padding: 7px 20px;
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #D62839;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+
+}
+
+.box a
+{
+  font-size: 10px;
+  padding: 7px 20px;
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #D62839;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+  width: 15%;
+  text-decoration: none;
+  }
+
+.box a:focus{
+  border-color: #D62839;
+}
+
+.box a:hover{
+  background: #D62839;
+}
+
+
+
+#titleText
+{
+  /*margin-top: 80%;*/
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  /*height: 100%;*/
+  top: 50%;
+  left: 30%;
+  position: absolute;
+  background: transparent;
+  text-align: center;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+  font-size: 45px;
+}
+
+.main{
+  width: 80%;
+  height: 100%;
+  top: 90%;
+  left: 50%;
+  position: absolute;
+  padding: 40px;
+  background: #0a0a0a;
+  text-align: center;
+  transform: translate(-50%);
+  z-index: 1;
+  border-radius: 24px;
+}
+
+.main h1
+{
+  /*margin-top: 80%;*/
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500px;
+
+  /*height: 100%;*/
+  top: 5%;
+  left: 50%;
+  position: absolute;
+  background: transparent;
+  text-align: center;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+  font-size: 45px;
+}
+
+  * {
+    scrollbar-width: none;
+    scrollbar-color: #8f54a0 #0a0a0a;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #0a0a0a;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #0a0a0a;
+    border-radius: 10px;
+    border: 3px solid #3498db;
+  }
+
+  .main .github
+  {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+  }
+
+  .main .done
+  {
+    top: 60%;
+    width: 100%;
+    position: absolute;
+  }
+
+  .main img
+  {
+    width: 200px;
+    position: relative;
+  }
+
+  .main .github img
+  {
+    left: -30%;
+  }
+
+  .main .done img
+  {
+    left: 30%;
+  }
+
+  .main .github h2
+  {
+    /*margin-top: 80%;*/
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500px;
+  
+    /*height: 100%;*/
+    top: 10%;
+    left: 40%;
+    position: absolute;
+    background: transparent;
+    text-align: center;
+    z-index: 1;
+    font-size: 35px;
+  
+  }
+
+  .main .done h2
+  {
+    /*margin-top: 80%;*/
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500px;
+  
+    /*height: 100%;*/
+    top: 10%;
+    left: 10%;
+    position: absolute;
+    background: transparent;
+    text-align: center;
+    z-index: 1;
+    font-size: 35px;
+  
+  }
+
+  .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  background-color: #0a0a0a;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #3498db;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #D62839;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+    </style>
+</head>
+<body>
+    
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="login.html">Home</a>
+    <a href="#">Profile</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
+
+    <div class="header">
+        <img src="LogoTrans.png" alt="Logo">
+        <div>
+
+        </div>
+        <img style="
+            height: 50px;
+            padding: 15px;
+            padding-right: 40px;
+            right: 10px;    
+        " src="menu.png" alt="menu icon" onclick="openNav()">&#9776;>
+    </div>
+    
+    
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
+</body>
+</html>
