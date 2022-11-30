@@ -343,12 +343,12 @@
         " src="menu.png" alt="menu icon" onclick="openNav()">&#9776;>
     </div>
     
-    <form class="box" method="post">
+    <form class="box" method="post" action="index.html">
 
         <h1>Login</h1>
         <input type="text" name="" placeholder="Username">
         <input type="password" name="" placeholder="Password">
-        <input type="submit" name="" value="Login" action="login.html">
+        <input type="submit" name="" value="Login">
         <a href="SignIn.html">Sing Up</a>
         
     </form>
@@ -378,6 +378,11 @@
 
       function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
+      }
+
+      function goToMainpage()
+      {
+
       }
     </script>
 </body>
